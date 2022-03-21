@@ -6,39 +6,60 @@
 
 body {
     background-color: rgb(136, 136, 136);
+    background-image: url(./assets/brain.jpeg);
 }
 
 h1 {
     font-size: 50px;
     display: inline-block;
+    padding-top: 20px;
 }
 
 .rules {
-    font-size: 20px;
+    display: block;
+    text align: center;
+    font-size: 25px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: auto;
     padding-right: auto;
 }
 
+#initials {
+    text-align: center;
+    padding-bottom: 0px;
+   
+}
+
 .clock {
-    font-family: monospace;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
     padding-top: 30px;
 }
 
 .container {
+    position: relative;
+    background-color: aliceblue;
     display: block;
+    border: 4px dotted black;
     text-align: center;
     margin: 60px auto;
-    width: 80vw;
+    width: 50%;
     padding-top: 20px;
+    border-radius: 20px;
 }
 
-button {
+p {
+    padding: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.startButton {
     text-align: center;
     font-size: 18px;
     color: red;
-    padding: 5px;
+    padding: 8px;
     margin: 10px;
 }
+
