@@ -1,22 +1,22 @@
-
 var currentTime = document.querySelector("#currentTime");
-var questionChoiceEl = document.querySelector('#question-choice');
 var submitButtonEl = document.querySelector("#submitInitials");
 var scoresEl = document.querySelector("highScores");
 var questionChoice = ;
 var holdInterval = 0;
 var clearInterval = 0;
-var startButtonEl = document.getElementById(".startButton");
 
+var startButton = document.getElementById(".startButton");
 var questionContainer = document.getElementById("questions-container")
+var questionChoiceEl = document.querySelector('#question-choice');
 var questionEl = document.getElementById("question");
 var option1El = document.getElementById("option1");
 var option2El = document.getElementById("option2");
 var option3El = document.getElementById("option3");
 var option4El = document.getElementById("option4");
+var wrong = document.getElementById("wrong");
+var timeEl = document.getElementById('timer')
 
-
-
+var playerAnswer = "";
 var timeLeft = 30;
 var timeInterval = 0;
 var results = 0;
@@ -26,50 +26,29 @@ var allScores = 0;
 var highScores = [];
 var initials = "";
 
-var timeEl = document.getElementById('timer');
-
-startButtonEl.addEventListener("click", function () {
-    questionContainer.classList.remove("hidden")
-
-}
-
 // need a start button event click for timer 
 // startButton.addEventListener("click", timer);
-startButtonEl.addEventListener("click", timerStart);
 
-
+startButton.addEventListener("click", quizStart);
+    
+    
 function timer() {
+    timeLeft = 30;
+    timerDisplay.textContent = timeLeft;
     timeInterval = setInterval(function () {
-        console.log(timeLeft)
-        timeLeft--
+        timerDisplay.textContent = timeLeft;
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
 
-        if (timeLeft > 0) {
-        } else {
-            timeEl.tectContent = '0';
-            displayResults();
-            clearInterval();
-            displayMessage();
-        }
+        if(timeLeft <= 0) {
+            timeLeft = 0
+            timerDisplay.textContent = timeLeft;
+            clearInterval(timeInterval);
+
+            gameOver();
         }, 1000);
     }
-   
-
-
-
-// function setTime() {
-//     var timeInterval = setInterval(function() {
-//     secondsLeft--;
-//     timeEl.textContent = timeLeft + " seconds left";
-
-    // if(secondsLeft === 0) {
-    // clearInterval(timerInterval);   
-    // sendMessage();
-
-
-// questions
-
-
-
+    
 
 var questions = [ 
 {            
@@ -106,11 +85,13 @@ correct: "He slept at night",
 },
 ];
 
-var index = 0;
+var questionIndex = 0;
 var i = 0;
 
-
-
-highScoresEl.addEventListener("click", viewHighScore);
-
-// need to get the clock working when start button is clicked
+var changeQuestion = function () {
+    quizQuestion.textCOntent = questions[i].question;
+    answer1.textContent = questions[i].answer1;
+    answer1.textContent = questions[i].answer2;
+    answer1.textContent = questions[i].answer3;
+    answer1.textContent = questions[i].answer4;
+};
