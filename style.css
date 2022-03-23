@@ -39,9 +39,11 @@ body {
     text-align: center;
     margin: 60px auto;
     width: 50%;
-    padding-top: 20px;
+    padding-top: 60px;
     border-radius: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 60px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 h1 {
@@ -57,7 +59,7 @@ h1 {
     text-align: center;
     font-size: 25px;
     padding-top: 2rem;
-    padding-bottom: 0rem;
+    padding-bottom: 1rem;
     padding-left: auto;
     padding-right: auto;
 }
@@ -67,23 +69,22 @@ h1 {
     font-size: 20px;
     width: 20%;
     padding-bottom: 0px;
-
+}
 p {
     padding: 1.5em;
     margin-left: 0;
     margin-right: 0;
 }
 
-#startButton {
+.startButton {
     text-align: center;
     font-size: 15px;
     color: black;
-    padding: 8px;
+    padding: 10px;
     margin: 10px;
-    width:23%;
 }
 
-.scores-wrapper {
+.scores {
     text-align: center;
 
 }

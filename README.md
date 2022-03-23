@@ -1,4 +1,5 @@
 # code-quiz
+Unfinished app
 Link https://bcorporal.github.io/brain-games/
 https://github.com/bcorporal/brain-games.git
 
