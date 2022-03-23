@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Brain Quiz featuring trick quesstions that will have you thinking twice.
+This is a Brain Games Quiz featuring trick quesstions that will have you thinking twice.
 
 When you click the start button a timer starts and you have 30 seconds to answer the questions. 
 
