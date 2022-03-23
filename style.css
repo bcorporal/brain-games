@@ -6,38 +6,32 @@
 
 body {
     background-color: rgb(136, 136, 136);
-    background-image: url(./assets/brain.jpeg);
+    background-image: url(./assets/brain.jpeg); */
 }
 
-h1 {
-    font-size: 50px;
-    display: inline-block;
-    padding-top: 20px;
-}
-
-.rules {
+.nav {
     display: block;
-    text align: center;
+    position: relative;
+}
+
+#timer {
     font-size: 25px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: auto;
-    padding-right: auto;
+    padding-bottom: 2em;
+    padding-right: 2em; 
+    position: relative;
+    display: block;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#initials {
-    text-align: center;
-    padding-bottom: 0px;
-   
+#high-scores {
+    display: block;
+    font-size: 30px;
+    padding-top: 2em;
+    padding-left: 2em;
 }
 
-.clock {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 25px;
-    padding-top: 30px;
-}
-
-.container {
+.seen {
     position: relative;
     background-color: aliceblue;
     display: block;
@@ -49,17 +43,51 @@ h1 {
     border-radius: 20px;
 }
 
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    display: inline-block;
+    padding-top: 0em;
+}
+
+.rules {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+#initials {
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+    padding-bottom: 0px;
+
+   
+}
+
+
+
 p {
     padding: 1.5em;
     margin-left: 0;
     margin-right: 0;
 }
 
-.startButton {
+#startButton {
     text-align: center;
-    font-size: 18px;
-    color: red;
+    font-size: 15px;
+    color: black;
     padding: 8px;
     margin: 10px;
+    width:23%;
 }
 
+.scores-wrapper {
+    text-align: center;
+
+}
