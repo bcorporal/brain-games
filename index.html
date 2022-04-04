@@ -9,78 +9,40 @@
 </head>
 <body>
     <nav>
-        <a href="#" id="high-scores">View Highscores</a>
-            <div id="timer">Time: <span id="timerValue">0</span></div>
-            </nav>
+        <h3 id="view-scores">View Highscores</h3>
+        <h2 class="time"></h2>
+          </nav>
+<main>
 
     <div class="seen" id="intro-container">
-        <div class="main-screen">
-        <div class="rules">
-        <h1>BRAIN GAMES</h1>
-            <p>Welcome to Brain Games. You have 30 seconds to answer these trick questions testing your brain.
-                Incorrect answers will result in a 5 second penalty off the clock. Will you get the high score? 
-            </p>
-        </div>
-        <div class="initials">
-            <input type="text" id="initials" placeholder="Your Initials">
-        </div>
-    <div class="startButton">
+        
+        <h1 id="title">Brain Games</h1>
+        <h2 id="prompt">Welcome to Brain Games. You have 30 seconds to answer these trick questions testing your brain.
+            Incorrect answers will result in a 5 second penalty off the </h2>
+        </h2>
         <button id="startButton">START GAME ▶</button>
+        <div class="choices">
+            <button id="choice1"></button>
+            <button id="choice2"></button>
+            <button id="choice3"></button>
+            <button id="choice4"></button>
         </div>
-        <div class="hidden" id="scores">
-            <div class="scores-wrapper">
-        <a href="#"><button>VIEW HIGH SCORES</button></a>
     </div>
+    
+        <div class="completion-form">
+            <h2 id="completion-alert"></h2>
+            <label for="player-initials" id="initials-label" class="label-tx">Enter Initials</label>
+            <input id="player-initials" />
+            <button id="submit-button">Submit</button>
         </div>
-
-            <!-- <div id="questions"> -->
-                <!-- <h1 id="question-text"></h1>
-                <div id="question-choice"></div>
-                <div id="answer-correct">
-                    <p>Correct!</p>
-            </div>
-            <div id="answer-incorrect">
-                <p>Wrong Answer!</p>
-            </div>
-            </div>
-
-            <div class="hidden" id="questions-container">
-                <div class="questions">
-                    <h2 id="question"></h2>
-                    <div class="choices" id="answers">
-                        <button id="option1"></button>
-                        <button id="option2"></button>
-                        <button id="option3"></button>
-                        <button id="option4"></button>
-            </div>
-
-            <div class="end-container">
-                <h1>
-                    <p>Your score is <span id="finalScore"></span></p>
-                </h1>
-            </div> -->
-
-<!-- 
-            </div> -->
-    
-
-
-
-
-
-
-
-
-    </head>
-  
-    
- 
-
-
-
-
-
-
+        <h2 id="score-title">High scores</h2>
+        <table class = "center" id = "player-stats"></table>
+        <div class="end-choices">
+            <button id="go-back">Go Back</button>
+            <button id="clear-scores">Clear Scores</button>
+        </div>
+        </main>
+        
 <link rel="stylesheet" href="./script.js" />    
 </body>
 </html>

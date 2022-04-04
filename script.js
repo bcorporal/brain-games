@@ -1,89 +1,83 @@
-var currentTime = document.querySelector("#currentTime");
-var submitButtonEl = document.querySelector("#submitInitials");
-var scoresEl = document.querySelector("highScores");
-var questionChoice = ;
-var holdInterval = 0;
-var clearInterval = 0;
-
-var startButton = document.getElementById(".startButton");
-var questionContainer = document.getElementById("questions-container")
-var questionChoiceEl = document.querySelector('#question-choice');
-var questionEl = document.getElementById("question");
-var option1El = document.getElementById("option1");
-var option2El = document.getElementById("option2");
-var option3El = document.getElementById("option3");
-var option4El = document.getElementById("option4");
-var wrong = document.getElementById("wrong");
-var timeEl = document.getElementById('timer')
-
-var playerAnswer = "";
-var timeLeft = 30;
-var timeInterval = 0;
-var results = 0;
-var penalty = 5;
-var score = 0;
-var allScores = 0;
-var highScores = [];
-var initials = "";
-
-// need a start button event click for timer 
-// startButton.addEventListener("click", timer);
-
-startButton.addEventListener("click", quizStart);
-    
-    
-function timer() {
+// timer
+function setTimer() {
     timeLeft = 30;
-    timerDisplay.textContent = timeLeft;
-    timeInterval = setInterval(function () {
-        timerDisplay.textContent = timeLeft;
-        timeLeft--;
-        timerDisplay.textContent = timeLeft;
+    var timeInterval = setInterval(function() {
+        timeEl.textContent = "Time: " + secondsLeft;
+        if(secondsLeft <= 0 | secondsLeft == finalSecondsLeft | stopTimer) {
+            clearInterval(timerInterval);
+        }
+        secondsLeft--;
+    }, 1000);
+}
 
-        if(timeLeft <= 0) {
-            timeLeft = 0
-            timerDisplay.textContent = timeLeft;
-            clearInterval(timeInterval);
 
-            gameOver();
-        }, 1000);
-    }
-    
 
-var questions = [ 
-{            
-question: "What is harder to catch the faster you run?",
-answer1: "The sky",
-answer2: "A car",
-answer3: "Your Breath",
-answer4: "Water",
-correct: "Your breath",
-    },
-    {
-question: "What can one catch that is not thrown?",
-answer1: "Attention",
-answer2: "A bullet",
-answer3: "A cold",
-answer4: "A basketball",
-correct: "A cold",
-    },
-    {
-question: "If Mrs. Smith's rooster lays an egg in Mr. Brown's yard, who owns the egg?",
-answer1: "Nobody",
-answer2: "Mr. Brown",
-answer3: "The Rooster",
-answer4: "Mrs Smith",
-correct: "Nobody",
-    },
-    { 
-question: "A man once said he went 35 days without sleep. How is that possbile?",
-answer1: "He took quick naps",
-answer2: "He ran off adrenaline",
-answer3: "He slept at night",
-answer4: "Its not possible",
-correct: "He slept at night",
+// questions
+var quizQuestions = [q1,q2,q3,q4];  
+var q1 = {
+
+    question: "1. What is harder to catch the faster you run?",
+    choices: ['The sky', 'A car', 'Your Breath', 'Water'],
+    answer: 'Your Breath',
 },
-];
+var  q2 = {
+
+    question: "2. What can one catch that is not thrown?",
+    choices: ['Attention', 'A bullet', 'A cold', 'A basketball'],
+
+}
+var  q3 = {
+
+    question: "3. If Mrs. Smith's rooster lays an egg in Mr. Brown's yard, who owns the egg?",
+    choices: ['Nobody', 'Mr. Brown', 'The Rooster', 'Mrs. Smith'],
+    answer: 'Nobody',
+
+    
+}
+var  q4 = {
+
+    question: "4. A man once said he went 35 days without sleep. How is that possbile?",
+    choices: ['He took quick naps', 'He ran off adrenaline', 'He slept at night', 'Its not possible'],
+    answer: 'He slept at night',    
+}
+
+
+var timeEl = document.querySelector(".time");
+var secondsLeft = 0;
+timeEl.textcontent = "Time: " + secondsLeft;
+var finalSecondsLeft = 0;
+var stopTimer = false
+
+var title = document.querySelector("#prompt");
+var startQuiz = document.querySelector("#start-quiz");
+var choicesEl = document.querySelector(".choices");
+choicesEl.setAttribute("style", "display: none");
+var completonForm = document.querySelector(".completion-form");
+completonForm.setAttribute("style", "display: none");
+var completionAlert = document.querySelector("#completion-alert");
+var initialsLabel = document.querySelector("#initials-label");
+var playerInitials = document.querySelector("#player-initials");
+var submitButton = document.querySelector("#submit-button");
+var endChoices = document.querySelector(".end-choices");
+endChoices.setAttribute("style", "display: none");
+var goBack = document.querySelector("#go-back");
+var clearScores = document.querySelector("#clear-scores");
+var viewHighScores =document.querySelector("#view-highscores");
+var scoreTitle = document.querySelector("#score-title");
+scoreTitle.setAttribute("style", "display: none");
+
+var questionEl = document.querySelector("#choice1");
+var option1El = document.querySelector("#choice2");
+var option2El = document.querySelector("#choice3");
+var option3El = document.querySelector("#choice4");
+
+var evalAlert = document.querySelector("#eval-alert");
+evalAlert.setAttribute("style", "display: none");
+var evalText = document.querySelector("#eval-text");
+var playerStats = document.querySelector("#player-stats");
+playerStats.setAttribute("style", "display: none");
+
+
 
 var questionIndex = 0;
 var i = 0;
