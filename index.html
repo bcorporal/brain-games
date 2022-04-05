@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brain Game</title>
+    <title>Brain Games</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <nav>
-        <h3 id="view-scores">View Highscores</h3>
+        <h3 id="view-highscores">View Highscores</h3>
         <h2 class="time"></h2>
-          </nav>
+</nav>
 <main>
-
-    <div class="seen" id="intro-container">
-        
+    <div class="container" id="intro-container">
         <h1 id="title">Brain Games</h1>
         <h2 id="prompt">Welcome to Brain Games. You have 30 seconds to answer these trick questions testing your brain.
-            Incorrect answers will result in a 5 second penalty off the </h2>
+            Incorrect answers will result in a 5 second penalty off the clock.</h2>
         </h2>
-        <button id="startButton">START GAME ▶</button>
+        <button id="start-quiz">START GAME ▶</button>
         <div class="choices">
             <button id="choice1"></button>
             <button id="choice2"></button>
             <button id="choice3"></button>
             <button id="choice4"></button>
         </div>
-    </div>
-    
+        <div id="eval-alert">
+            <hr>
+            <h3 id="eval-text"></h3>
+        </div>
         <div class="completion-form">
             <h2 id="completion-alert"></h2>
             <label for="player-initials" id="initials-label" class="label-tx">Enter Initials</label>
@@ -42,7 +42,7 @@
             <button id="clear-scores">Clear Scores</button>
         </div>
         </main>
-        
-<link rel="stylesheet" href="./script.js" />    
+
+    <script src="./script.js"></script>
 </body>
 </html>
