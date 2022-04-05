@@ -11,7 +11,6 @@ function setTimer() {
 }
 
 
-
 // questions
 var quizQuestions = [q1,q2,q3,q4];  
 var q1 = {
@@ -19,13 +18,13 @@ var q1 = {
     question: "1. What is harder to catch the faster you run?",
     choices: ['The sky', 'A car', 'Your Breath', 'Water'],
     answer: 'Your Breath',
-},
+};
 var  q2 = {
 
     question: "2. What can one catch that is not thrown?",
     choices: ['Attention', 'A bullet', 'A cold', 'A basketball'],
 
-}
+};
 var  q3 = {
 
     question: "3. If Mrs. Smith's rooster lays an egg in Mr. Brown's yard, who owns the egg?",
@@ -33,13 +32,13 @@ var  q3 = {
     answer: 'Nobody',
 
     
-}
+};
 var  q4 = {
 
     question: "4. A man once said he went 35 days without sleep. How is that possbile?",
     choices: ['He took quick naps', 'He ran off adrenaline', 'He slept at night', 'Its not possible'],
     answer: 'He slept at night',    
-}
+};
 
 
 var timeEl = document.querySelector(".time");
@@ -78,14 +77,49 @@ var playerStats = document.querySelector("#player-stats");
 playerStats.setAttribute("style", "display: none");
 
 
+let j = 0;
+function quizFunction(i) {
+    j = i;
+    choicesEl.setAttribute("style", "display: block");
+    promptEl.textContent = quizQuestions[i].question;
+    choice1.textContent = quizQuestions[i].choices[0];
+    choice2.textContent = quizQuestions[i].choices[1];
+    choice3.textContent = quizQuestions[i].choices[2];
+    choice4.textContent = quizQuestions[i].choices[3];
+}
 
-var questionIndex = 0;
-var i = 0;
+function endIterateFunction() {
+    if (j == quizQuestions.length - 1) {
+        finalSecondsLeft = secondsLeft;
+        promptEl.setAttribute("style", "display: none");
+        choicesEl.setAttribute("style", "display: none");
+        evalAlert.setAttribute("style", "display: none");
+        completionForm.setAttribute("style", "display: none");
+        completionAlert.textContent = "Game over! Your final score is " + finalSecondsLeft;
+    } else if (j < quizQuestions.length - 1) {
+        j++;
+        quizFunction(j);
+    }};
 
-var changeQuestion = function () {
-    quizQuestion.textCOntent = questions[i].question;
-    answer1.textContent = questions[i].answer1;
-    answer1.textContent = questions[i].answer2;
-    answer1.textContent = questions[i].answer3;
-    answer1.textContent = questions[i].answer4;
-};
+    function addHighscore() {
+        var existingScores = JSON.parse(localStorage.getItem("playerScores"));
+        if (existingScores == null) existingScores = [];
+        var highScore = {
+            "initials": playerInitials.ariaValueMax,
+            "score": finalSecondsLeft,
+        };
+        localStorage.setItem("highScore", JSON.stringify(highScore));
+        existingScores.push(highScore);
+        localStorage.setItem("playerScores", JSON.stringify(existingScores));
+    };
+
+    function highScoreTable() {
+        var allScores = JSON.parse(localStorage.getItem("playerScores"));
+        if (allScores == null) {
+            allscores = [];
+        };
+        allScores.sort(function(a,b) {
+            return parseFloat(b.score) - parseFloat(a.score);
+        });
+        playerStats.setAttribute("style", "display: block");
+        
