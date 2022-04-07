@@ -10,14 +10,14 @@
     background-color: rgb(136, 136, 136);
      background-image: url(./assets/brain.jpeg);
  }
-/* }
+
 
 .nav {
     display: block;
     position: relative;
 }
 
-#timer {
+.time {
     font-size: 25px;
     padding-bottom: 2em;
     padding-right: 2em; 
@@ -27,14 +27,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#high-scores {
+.score-title {
     display: block;
     font-size: 30px;
     padding-top: 2em;
     padding-left: 2em;
 }
 
-.seen {
+.container {
     position: relative;
     background-color: aliceblue;
     display: block;
@@ -49,7 +49,7 @@
     padding-left: 40px;
 }
 
-h1 {
+h1 
     display: block;
     text-align: center;
     font-size: 50px;
@@ -90,4 +90,6 @@ p {
 .scores {
     text-align: center;
 
-} */
+}
+
+
