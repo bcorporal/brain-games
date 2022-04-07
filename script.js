@@ -86,7 +86,7 @@ function endIterateFunction() {
         promptEl.setAttribute("style", "display: none");
         choicesEl.setAttribute("style", "display: none");
         evalAlert.setAttribute("style", "display: none");
-        completionForm.setAttribute("style", "display: none");
+        completionForm.setAttribute("style", "display: block");
         completionAlert.textContent = "Game over! Your final score is " + finalSecondsLeft;
     } else if (j < quizQuestions.length - 1) {
         j++;
@@ -108,7 +108,7 @@ function addHighScore() {
 function highScoreTable() {
     var allScores = JSON.parse(localStorage.getItem("playerScores"));
     if (allScores == null) {
-        allscores = [];
+        allScores = [];
     };
     allScores.sort(function (a, b) {
         return parseFloat(b.score) - parseFloat(a.score);
@@ -164,20 +164,21 @@ function highScoreTable() {
                 endIterateFunction();
             } else if (element.textContent != quizQuestions[j].answer) {
                 evalAlert.setAttribute("style", "display: block");
-                evalText.textContent = "Wrong.";
+                evalText.textContent = "Wrong Answer.";
                 secondsLeft = secondsLeft - 5;
                 endIterateFunction();
             }
         }
     })
-    // submit initials and score
-    submitButton.addEventListener("click", function() {
-        completionForm.setAttribute("style", "display: none");
-        scoreTitle.setAttribute("style", "display: block");
-        addHighScore();
-        highScoreTable();
-        endChoices.setAttribute("style", "display: block");
-    })
+    //  submit initials and score
+     submitButton.addEventListener("click", function() {
+         completionForm.setAttribute("style", "display: none");
+         scoreTitle.setAttribute("style", "display: block");
+         addHighScore();
+         highScoreTable();
+         endChoices.setAttribute("style", "display: block");
+     })
+
     // go back to beginning of page
     goBack.addEventListener("click", function() {
         location.reload();
