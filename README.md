@@ -1,5 +1,5 @@
-# code-quiz
-Unfinished app
+# brain-games
+
 Link https://bcorporal.github.io/brain-games/
 https://github.com/bcorporal/brain-games.git
 
@@ -9,9 +9,7 @@ This is a Brain Games Quiz featuring trick quesstions that will have you thinkin
 
 When you click the start button a timer starts and you have 30 seconds to answer the questions. 
 
-If the answer to a question is incorrect, 5 seconds is subtracted from the clock.
-
-When all questions are answered or the timer reaches 0, the game is over.
+If the answer to a question is incorrect, 5 seconds is subtracted from the clock. Correct answers will add an additional 7 seconds.
 
 When the game is over you can save your initials and score.
 
@@ -19,7 +17,9 @@ When the game is over you can save your initials and score.
 ## Screenshot
 
    
-![screenshot](./assets/Screen%20Shot%202022-03-21%20at%202.46.22%20PM.png)
+![screenshot](./assets/Screen%20Shot%202022-04-07%20at%208.43.19%20PM.png)
+![screenshot](./assets/Screen%20Shot%202022-04-07%20at%208.43.34%20PM.png)
+
   
 
 ## Credits

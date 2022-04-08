@@ -6,12 +6,10 @@
 
 button {
     color: black;
-   
-    
+      
 }
 
  body {
-    background-color: rgb(136, 136, 136);
      background-image: url(./assets/brain.jpeg);
  }
 
@@ -48,7 +46,7 @@ button {
     border: 4px dotted black;
     text-align: center;
     margin: 5em auto;
-    width: 70%;
+    width: 50%;
     padding-top: 3em;
     border-radius: 20px;
     padding-bottom: 60px;
@@ -80,6 +78,7 @@ h1 {
     width: 20%;
     padding-bottom: 0px;
 }
+
 p {
     padding: 1.5em;
     margin-left: 0;
