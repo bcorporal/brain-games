@@ -4,7 +4,11 @@
     margin: 0;
 }
 
-
+button {
+    color: black;
+   
+    
+}
 
  body {
     background-color: rgb(136, 136, 136);
@@ -18,8 +22,10 @@
 }
 
 .time {
-    font-size: 25px;
-    padding-bottom: 2em;
+    font-size: 35px;
+    background-color: aliceblue;
+    padding-bottom: 0em;
+    padding-top: 0;
     padding-right: 2em; 
     position: relative;
     display: block;
@@ -27,11 +33,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.score-title {
+#view-highscores {
     display: block;
-    font-size: 30px;
-    padding-top: 2em;
-    padding-left: 2em;
+    font-size: 25px;
+    padding-top: 0em;
+    padding-left: 0em;
+    background-color: aliceblue;
 }
 
 .container {
@@ -40,9 +47,9 @@
     display: block;
     border: 4px dotted black;
     text-align: center;
-    margin: 60px auto;
-    width: 50%;
-    padding-top: 60px;
+    margin: 5em auto;
+    width: 70%;
+    padding-top: 3em;
     border-radius: 20px;
     padding-bottom: 60px;
     padding-right: 40px;
@@ -60,7 +67,7 @@ h1 {
 #prompt {
     display: block;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: auto;

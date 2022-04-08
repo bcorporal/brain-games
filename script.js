@@ -18,7 +18,22 @@ var q4 = {
     choices: ['He took quick naps', 'He ran off adrenaline', 'He slept at night', 'Its not possible'],
     answer: 'He slept at night',
 };
-var quizQuestions = [q1,q2,q3,q4];
+var q5 = {
+    question: "5. What is always coming, but never arrives?",
+    choices: ['Today', 'Tomorrow', 'None', 'The Bus'],
+    answer: 'Tomorrow',
+};
+var q6 = {
+    question: "6. What is it that if you have, you want to share me, and if you share, you do not have?",
+    choices: ['Food', 'A secret', 'Money', 'Time'],
+    answer: 'A secret',
+};
+var q7 = {
+    question: "7. What is it that goes up, but never comes down?",
+    choices: ['Time', 'Age', 'Taxes', 'Balloons'],
+    answer: 'Age',
+};
+var quizQuestions = [q1,q2,q3,q4,q5,q6,q7];
 
 var timeEl = document.querySelector(".time");
 var secondsLeft = 0;
@@ -161,6 +176,7 @@ function highScoreTable() {
             if (element.textContent == quizQuestions[j].answer) {
                 evalAlert.setAttribute("style", "display: block");
                 evalText.textContent = "Correct!";
+                secondsLeft = secondsLeft + 7;
                 endIterateFunction();
             } else if (element.textContent != quizQuestions[j].answer) {
                 evalAlert.setAttribute("style", "display: block");
