@@ -4,13 +4,21 @@
     margin: 0;
 }
 
+main {
+    width: auto;
+}
+
 button {
     color: black;
+    font-size: 18px;
       
 }
 
  body {
-     background-image: url(./assets/brain.jpeg);
+     background-image: url(https://media1.giphy.com/media/l44QzsOLXxcrigdgI/giphy.gif);
+     background-attachment: fixed;
+  background-position: center;
+  background-size: auto;
  }
 
 
@@ -31,41 +39,90 @@ button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#view-highscores {
+h3 {
     display: block;
-    font-size: 25px;
+    font-size: 15px;
     padding-top: 0em;
     padding-left: 0em;
-    background-color: aliceblue;
+    background-color: rgb(186, 223, 255);
 }
 
 .container {
     position: relative;
-    background-color: aliceblue;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+
     display: block;
-    border: 4px dotted black;
+    
+    border: 4px black;
     text-align: center;
-    margin: 5em auto;
-    width: 50%;
-    padding-top: 3em;
-    border-radius: 20px;
-    padding-bottom: 60px;
-    padding-right: 40px;
-    padding-left: 40px;
+    margin-top: 12rem;
+    margin-bottom: 0px;
+    height: 100%;
+
+    width: 100%;
+    
+   
+}
+
+#completion-alert {
+    background-color: white;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: auto;
+    padding-right: auto;
 }
 
 h1 {
+    margin-top: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: white;
     display: block;
     text-align: center;
-    font-size: 50px;
-    display: inline-block;
-    padding-top: 0em;
+    font-size: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: auto;
+    padding-right: auto;
 }
 
+#initials-label.label-tx {
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+#player-stats.center {
+
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: auto;
+    padding-right: auto;
+}
+}
+
+
+h3 {
+    font-size: 20px;
+    color: red;
+}
 #prompt {
+    background-color: white;
     display: block;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: auto;
@@ -79,10 +136,19 @@ h1 {
     padding-bottom: 0px;
 }
 
+#start-quiz {
+    font-size: 20px;
+}
+
 p {
-    padding: 1.5em;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 1rem;
+    font-size: 25px;
+  
+   
+}
+
+button {
+    font-size: 20px;
 }
 
 .startButton {
@@ -99,3 +165,73 @@ p {
 }
 
 
+#score-title {
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+
+
+.title {
+    display: none;
+}
+
+#initials-label {
+    color: red;
+    font-size: 30px;
+        
+}
+
+#player-initials {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    width: 35%;
+} 
+
+#start-quiz {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+h2 {
+   padding-top: 50px;
+
+}
+
+th {
+    font-size: 25px;
+}
+
+td {
+    font-size: 50px;
+}
+
+
+div.choices {
+    margin-bottom: 40px;
+}
+
+p #prompt {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+@media screen and (min-width: 601px) {
+    .container {
+      font-size: 80px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      font-size: 30px;
+    }
+  }
