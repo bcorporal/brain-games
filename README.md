@@ -15,10 +15,12 @@ When the game is over you can save your initials and score.
 
 
 ## Screenshot
+![Brain Games (2)](https://user-images.githubusercontent.com/97717660/173214088-7542d282-85a6-4f05-a670-9260b95c5755.gif)
+
+![Brain Games (1)](https://user-images.githubusercontent.com/97717660/173214024-30847dfe-f191-4d3d-a33d-da1bb5dbaafb.gif)
 
    
-![screenshot](./assets/Screen%20Shot%202022-04-07%20at%208.43.19%20PM.png)
-![screenshot](./assets/Screen%20Shot%202022-04-07%20at%208.43.34%20PM.png)
+
 
   
 
